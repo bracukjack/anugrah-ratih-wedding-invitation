@@ -530,7 +530,7 @@ const InvitationPage = () => {
             <div className="flex flex-col gap-y-5">
               <Image
                 src="/svg/rek_ratih.svg"
-                className="w-[19rem]"
+                className="w-full"
                 alt="wedding"
                 width={1000}
                 height={1000}
@@ -554,11 +554,18 @@ const InvitationPage = () => {
             </div>
           </div>
 
-          <Link href="https://widitech.com" className="text-center">
-            <p className="text-center font-texturina text-text">
-              Power by : widitech.com
-            </p>
-          </Link>
+          <div className="flex flex-col gap-2">
+            <Link href="https://cmpt-rules.com" className="text-center">
+              <p className="text-center font-texturina text-text">
+                Design by : cmpt-rules.com
+              </p>
+            </Link>
+            <Link href="https://widitech.com" className="text-center">
+              <p className="text-center font-texturina text-text">
+                Power by : widitech.com
+              </p>
+            </Link>
+          </div>
         </div>
       )}
     </div>
