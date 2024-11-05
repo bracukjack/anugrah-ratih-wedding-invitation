@@ -8,7 +8,7 @@ export default function Home() {
 
   useEffect(() => {
     router.push("/invitation");
-  }, []);
+  }, [router]);
 
   return <main className="w-full bg-primary text-black"></main>;
 }
