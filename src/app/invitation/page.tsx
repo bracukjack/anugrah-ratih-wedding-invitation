@@ -8,6 +8,7 @@ import { useState } from "react";
 
 const InvitationPage = () => {
   const accountNumber = "7730551651";
+  const accountNumberRatih = "054021500394";
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
   const searchParams = useSearchParams();
@@ -16,6 +17,17 @@ const InvitationPage = () => {
   const handleCopy = () => {
     navigator.clipboard
       .writeText(accountNumber)
+      .then(() => {
+        alert("Nomor rekening berhasil disalin!");
+      })
+      .catch((err) => {
+        console.error("Gagal menyalin teks: ", err);
+      });
+  };
+
+  const handleCopyRatih = () => {
+    navigator.clipboard
+      .writeText(accountNumberRatih)
       .then(() => {
         alert("Nomor rekening berhasil disalin!");
       })
@@ -38,8 +50,8 @@ const InvitationPage = () => {
             src="/cover/main.jpg"
             className="w-fit h-fit"
             alt="logo"
-            width={500}
-            height={500}
+            width={1000}
+            height={1000}
           />
           <div className="flex flex-col">
             <p className="font-yrt text-center text-text">The Wedding of</p>
@@ -47,8 +59,8 @@ const InvitationPage = () => {
               src="/svg/name.svg"
               className="w-42"
               alt="logo"
-              width={500}
-              height={500}
+              width={1000}
+              height={1000}
             />
             <p className="font-yrt text-center text-text">
               special invitation to
@@ -75,10 +87,9 @@ const InvitationPage = () => {
             <div className="w-full flex flex-row justify-start items-center ">
               <Image
                 src="/svg/title.svg"
-                className="w-2/3"
                 alt="title"
-                width={500}
-                height={500}
+                width={1000}
+                height={1000}
               />
             </div>
 
@@ -87,15 +98,15 @@ const InvitationPage = () => {
                 src="/svg/name2.svg"
                 className="w-1/2"
                 alt="name2"
-                width={300}
-                height={300}
+                width={1000}
+                height={1000}
               />
               <Image
                 src="/svg/icon_1.svg"
                 className="w-1/4"
                 alt="icon_1"
-                width={300}
-                height={300}
+                width={1000}
+                height={1000}
               />
             </div>
 
@@ -110,20 +121,20 @@ const InvitationPage = () => {
                 src="/svg/date.svg"
                 className="w-1/2"
                 alt="date"
-                width={300}
-                height={300}
+                width={1000}
+                height={1000}
               />
             </div>
           </div>
 
-          <div className="bg-light w-full h-full flex flex-col items-center justify-center py-10 px-6 gap-10">
+          <div className="bg-light w-full h-full flex flex-col items-center justify-center py- px-6 gap-10">
             <div className="w-full flex flex-row justify-end items-center -mt-28">
               <Image
                 src="/svg/icon3.svg"
                 className="w-1/3"
                 alt="flower"
-                width={300}
-                height={300}
+                width={1000}
+                height={1000}
               />
             </div>
 
@@ -132,8 +143,8 @@ const InvitationPage = () => {
                 src="/svg/bridge.svg"
                 className="w-full"
                 alt="bridge"
-                width={300}
-                height={300}
+                width={1000}
+                height={1000}
               />
             </div>
 
@@ -143,8 +154,8 @@ const InvitationPage = () => {
                   <Image
                     src="/svg/wayan.svg"
                     alt="wayan"
-                    width={300}
-                    height={300}
+                    width={1000}
+                    height={1000}
                   />
                 </div>
 
@@ -162,8 +173,8 @@ const InvitationPage = () => {
                     src="/svg/matahari1.svg"
                     className="w-1/3"
                     alt="matahari1"
-                    width={300}
-                    height={300}
+                    width={1000}
+                    height={1000}
                   />
                 </div>
 
@@ -191,8 +202,8 @@ const InvitationPage = () => {
                 <Image
                   src="/cover/person1.jpg"
                   alt="person1"
-                  width={300}
-                  height={300}
+                  width={1000}
+                  height={1000}
                 />
               </div>
             </div>
@@ -202,8 +213,8 @@ const InvitationPage = () => {
                 <Image
                   src="/cover/person2.jpg"
                   alt="person2"
-                  width={300}
-                  height={300}
+                  width={1000}
+                  height={1000}
                 />
               </div>
 
@@ -212,8 +223,8 @@ const InvitationPage = () => {
                   <Image
                     src="/svg/ratih.svg"
                     alt="ratih"
-                    width={300}
-                    height={300}
+                    width={1000}
+                    height={1000}
                   />
                 </div>
 
@@ -231,8 +242,8 @@ const InvitationPage = () => {
                     src="/svg/bulan.svg"
                     className="w-1/3"
                     alt="bulan"
-                    width={300}
-                    height={300}
+                    width={1000}
+                    height={1000}
                   />
                 </div>
 
@@ -274,7 +285,7 @@ const InvitationPage = () => {
             <div className="w-full flex flex-col justify-center items-center">
               <iframe
                 className="w-full"
-                width="300"
+                width="1000"
                 height="200"
                 src="https://www.youtube.com/embed/XjbhtMS3EfU?si=_LW5aZJHBMEaWaQl"
                 title="YouTube video player"
@@ -287,8 +298,8 @@ const InvitationPage = () => {
                 src="/svg/ar_icon.svg"
                 className="w-1/6"
                 alt="ar_icon"
-                width={300}
-                height={300}
+                width={1000}
+                height={1000}
               />
             </div>
           </div>
@@ -299,8 +310,8 @@ const InvitationPage = () => {
                 src="/svg/om.svg"
                 className="w-1/4"
                 alt="om"
-                width={300}
-                height={300}
+                width={1000}
+                height={1000}
               />
             </div>
 
@@ -353,10 +364,10 @@ const InvitationPage = () => {
                   <>
                     <Image
                       src="/svg/map.svg"
-                      className="h-4"
+                      className="w-fit h-4"
                       alt="map"
-                      width={20}
-                      height={20}
+                      width={100}
+                      height={100}
                     />
                   </>
                 }
@@ -390,20 +401,21 @@ const InvitationPage = () => {
                 src="/svg/santi.svg"
                 className="w-1/2"
                 alt="santi"
-                width={300}
-                height={300}
+                width={1000}
+                height={1000}
               />
             </div>
 
             <div>
               <p className="text-xs text-secondary text-center font-texturina">
                 KAMI YANG BERBAHAGIA <br />
-                Kel. I Ketut Sukarmen Kel.
+                Kel. I Ketut Sukarmen
                 <br />
                 <br />
                 &
                 <br />
-                <br />I Nyoman Kariana, S.Sos.
+                <br />
+                Kel. I Nyoman Kariana, S.Sos.
               </p>
             </div>
 
@@ -412,8 +424,8 @@ const InvitationPage = () => {
                 src="/svg/ar2024.svg"
                 className="w-1/6"
                 alt="ar2024"
-                width={300}
-                height={300}
+                width={1000}
+                height={1000}
               />
             </div>
           </div>
@@ -424,15 +436,15 @@ const InvitationPage = () => {
                 src="/svg/gallery.svg"
                 className="w-1/2"
                 alt="om"
-                width={300}
-                height={300}
+                width={1000}
+                height={1000}
               />
             </div>
 
             <div className="w-full flex flex-col justify-center items-center">
               <iframe
                 className="w-full"
-                width="300"
+                width="1000"
                 height="200"
                 src="https://www.youtube.com/embed/569tpvirMqE?si=bXGiqQR5c2Qnkg1E"
                 title="YouTube video player"
@@ -447,7 +459,7 @@ const InvitationPage = () => {
             <div className="w-full flex flex-col justify-center items-center">
               <iframe
                 className="w-full"
-                width="300"
+                width="1000"
                 height="200"
                 src="https://www.youtube.com/embed/tXYUKYGzxDA?si=enO868U9xDIg87L8"
                 title="YouTube video player"
@@ -500,6 +512,32 @@ const InvitationPage = () => {
 
               <div
                 onClick={handleCopy}
+                className="bg-secondary gap-2 cursor-pointer flex flex-row justify-between items-center px-4 py-2 rounded-sm text-white"
+              >
+                <Image
+                  src="/svg/copas.svg"
+                  className="w-4"
+                  alt="bca"
+                  width={100}
+                  height={100}
+                />
+                <p className="w-full text-center text-sm font-bold font-texturina">
+                  SALIN NOMOR REKENING
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-y-5">
+              <Image
+                src="/svg/rek_ratih.svg"
+                className="w-[19rem]"
+                alt="wedding"
+                width={1000}
+                height={1000}
+              />
+
+              <div
+                onClick={handleCopyRatih}
                 className="bg-secondary gap-2 cursor-pointer flex flex-row justify-between items-center px-4 py-2 rounded-sm text-white"
               >
                 <Image
