@@ -1,0 +1,32 @@
+{
+  "name": "anugrah-ratih-invitation",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm install --legacy-peer-deps && next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "fslightbox-react": "^1.7.6",
+    "glob": "^11.0.0",
+    "next": "15.0.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-responsive-masonry": "^2.4.1",
+    "rimraf": "^6.0.1",
+    "swr": "^2.2.5"
+  },
+  "devDependencies": {
+    "@types/fslightbox-react": "^1.7.8",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^9.14.0",
+    "eslint-config-next": "15.0.2",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "texturina";
+  src: url("../../public/fonts/texturina.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "yrt";
+  src: url("../../public/fonts/yrt.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "embassy";
+  src: url("../../public/fonts/embassy.ttf") format("truetype");
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
