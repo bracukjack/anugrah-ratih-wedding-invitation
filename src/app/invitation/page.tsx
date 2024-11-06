@@ -25,8 +25,6 @@ const InvitationPage = () => {
     }
   }, [audioRef]);
 
-  const audio = audioRef.current;
-
   const handleCopy = () => {
     navigator.clipboard
       .writeText(accountNumber)
