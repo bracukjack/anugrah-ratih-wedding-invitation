@@ -174,7 +174,7 @@ const InvitationPage = () => {
 
             <div>
               <Image
-                src="/svg/bridge.svg"
+                src="/svg/brige.svg"
                 className="w-full"
                 alt="bridge"
                 width={1000}
