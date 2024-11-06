@@ -592,10 +592,6 @@ const InvitationPage = () => {
           </div>
 
           <div className="fixed bottom-10 flex flex-col gap-3 right-4 z-50">
-            {/* <div className="bg-secondary rounded-full p-2 w-12 h-12 flex justify-center items-center">
-              <FontAwesomeIcon size="lg" className="text-white" icon={faPlay} />
-            </div> */}
-
             <div
               className="bg-secondary rounded-full p-2 w-12 h-12 flex justify-center items-center"
               onClick={toggleAudio}
