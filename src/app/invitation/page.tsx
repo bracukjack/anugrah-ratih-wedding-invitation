@@ -21,6 +21,9 @@ const InvitationPage = () => {
     if (typeof window !== "undefined") {
       if (!audioRef.current) {
         audioRef.current = new Audio("/audio/bandaneiraedit.mp3");
+        audioRef.current.addEventListener("canplay", () => {
+          console.log("Audio can be played");
+        });
       }
     }
   }, [audioRef]);
