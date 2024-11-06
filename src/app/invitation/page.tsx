@@ -66,6 +66,7 @@ const InvitationPage = () => {
 
   const handleOpenPopup = () => {
     setIsPopupVisible(true);
+    setIsPlaying(true);
     if (audioRef.current) {
       audioRef.current.play().catch((error) => {
         console.log("Audio play error:", error);
@@ -406,7 +407,7 @@ const InvitationPage = () => {
                 }
                 textColor="text-white"
                 text="GOOGLE MAPS"
-                link="/invitation"
+                link="https://maps.app.goo.gl/6btAYdP7aHPvBqNz9"
               />
             </div>
 
