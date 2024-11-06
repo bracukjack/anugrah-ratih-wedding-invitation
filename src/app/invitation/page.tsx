@@ -175,7 +175,7 @@ const InvitationPage = () => {
             <div className="flex justify-center items-center w-full">
               <Image
                 src="/svg/bride.svg"
-                className="w-3/4"
+                className="w-1/2"
                 alt="bridge"
                 width={2000}
                 height={2000}
