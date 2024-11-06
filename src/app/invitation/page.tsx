@@ -59,8 +59,11 @@ const InvitationPage = () => {
   const handleOpenPopup = () => {
     setIsPopupVisible(true);
     setIsPlaying(true);
-    if (!isPlaying) {
-      audioRef.current!.play();
+
+    if (!isPlaying && audioRef.current) {
+      audioRef.current.play().catch((error) => {
+        console.log("Audio play error:", error);
+      });
     }
   };
 
