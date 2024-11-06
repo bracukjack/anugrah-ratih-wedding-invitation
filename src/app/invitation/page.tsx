@@ -18,15 +18,20 @@ const InvitationPage = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (!audioRef.current) {
-        audioRef.current = new Audio("/audio/bandaneiraedit.mp3");
-        audioRef.current.addEventListener("canplay", () => {
-          console.log("Audio can be played");
-        });
-      }
+    if (typeof window !== "undefined" && !audioRef.current) {
+      audioRef.current = new Audio("/audio/bandaneiraedit.mp3");
+
+      const playAudio = () => {
+        audioRef
+          .current!.play()
+          .catch((error) => console.log("Play error:", error));
+      };
+
+      document.addEventListener("click", playAudio, { once: true });
+
+      return () => document.removeEventListener("click", playAudio);
     }
-  }, [audioRef]);
+  }, []);
 
   const handleCopy = () => {
     navigator.clipboard
@@ -61,9 +66,7 @@ const InvitationPage = () => {
 
   const handleOpenPopup = () => {
     setIsPopupVisible(true);
-    setIsPlaying(true);
-
-    if (!isPlaying && audioRef.current) {
+    if (audioRef.current) {
       audioRef.current.play().catch((error) => {
         console.log("Audio play error:", error);
       });
