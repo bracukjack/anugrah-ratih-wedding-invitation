@@ -1,18 +1,35 @@
 "use client";
 import AppButton from "@/components/button";
 import Gallery from "@/components/gallery";
+import {
+  faPlay,
+  faVolumeHigh,
+  faVolumeMute,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const InvitationPage = () => {
   const accountNumber = "7730551651";
   const accountNumberRatih = "054021500394";
   const [isPopupVisible, setIsPopupVisible] = useState(false);
-
   const searchParams = useSearchParams();
   const toParam = searchParams.get("to");
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (!audioRef.current) {
+        audioRef.current = new Audio("/audio/bandaneiraedit.mp3");
+      }
+    }
+  }, [audioRef]);
+
+  const audio = audioRef.current;
 
   const handleCopy = () => {
     navigator.clipboard
@@ -36,8 +53,21 @@ const InvitationPage = () => {
       });
   };
 
+  const toggleAudio = () => {
+    if (isPlaying) {
+      audioRef.current!.pause();
+    } else {
+      audioRef.current!.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
   const handleOpenPopup = () => {
     setIsPopupVisible(true);
+    setIsPlaying(true);
+    if (!isPlaying) {
+      audioRef.current!.play();
+    }
   };
 
   return (
@@ -565,6 +595,23 @@ const InvitationPage = () => {
                 Power by : widitech.com
               </p>
             </Link>
+          </div>
+
+          <div className="fixed bottom-10 flex flex-col gap-3 right-4 z-50">
+            {/* <div className="bg-secondary rounded-full p-2 w-12 h-12 flex justify-center items-center">
+              <FontAwesomeIcon size="lg" className="text-white" icon={faPlay} />
+            </div> */}
+
+            <div
+              className="bg-secondary rounded-full p-2 w-12 h-12 flex justify-center items-center"
+              onClick={toggleAudio}
+            >
+              <FontAwesomeIcon
+                size="lg"
+                className="text-white"
+                icon={!isPlaying ? faVolumeMute : faVolumeHigh}
+              />
+            </div>
           </div>
         </div>
       )}
